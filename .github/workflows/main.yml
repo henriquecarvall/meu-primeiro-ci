@@ -1,0 +1,23 @@
+name: Testes Automáticos
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Baixar código
+      uses: actions/checkout@v4
+      
+    - name: 🔧 Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: 🧪 Rodar testes
+      run: node testar.js
