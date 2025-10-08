@@ -3,7 +3,7 @@ function somar(a, b) {
 }
 
 function multiplicar(a, b) {
-    return a * b;
+    return a + b; // ❌ ERRADO! Deveria ser a * b
 }
 
 module.exports = { somar, multiplicar };
